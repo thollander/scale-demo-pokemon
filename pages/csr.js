@@ -4,8 +4,9 @@ import Date from "../components/Date";
 import PacmanLoader from "react-spinners/PacmanLoader";
 
 const override = {
-  display: "block",
-  margin: "30rem auto",
+  position: "absolute",
+  left: "calc(50% - 300px)",
+  top: "calc(50% - 150px)",
 };
 
 export default function Csr() {
