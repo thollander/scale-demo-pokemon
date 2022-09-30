@@ -1,25 +1,24 @@
-// This gets called on every request
+import PokemonList from "../components/PokemonList";
+import Date from "../components/Date";
+
 export async function getStaticProps() {
-  const [pokemon, date] = await Promise.all([
-    (await fetch(`https://pokebuildapi.fr/api/v1/pokemon/limit/151`)).json(), // get pokemon
-    (await fetch(`https://worldtimeapi.org/api/timezone/Europe/Paris`)).json(), // get date
+  const [pokemons, date] = await Promise.all([
+    (await fetch(`https://pokebuildapi.fr/api/v1/pokemon/limit/150`)).json(),
+    (await fetch(`https://worldtimeapi.org/api/timezone/Europe/Paris`)).json(),
   ]);
 
-  // Pass data to the page via props
   return {
-    props: { pokemon, date },
+    props: { pokemons, date },
     revalidate: 10,
   };
 }
 
-export default function Ssg({ pokemon, date }) {
+export default function Isr({ pokemons, date }) {
   return (
-    <div>
-      <h1>Date : {new Date(date.datetime).toLocaleString("en-US")}</h1>
+    <main>
       <h1>Pokémons</h1>
-      {pokemon.map(function (object, i) {
-        return <img src={object.sprite} alt={object.name} key={i} />;
-      })}
-    </div>
+      <Date date={date.datetime} />
+      <PokemonList pokemons={pokemons} />
+    </main>
   );
 }

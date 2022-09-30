@@ -1,29 +1,22 @@
-import Link from "next/link";
+import { VtmnLink } from "@vtmn/react";
+import styles from "../styles/Home.module.css";
 
 function Home() {
   return (
-    <ul>
-      <li>
-        <Link href="/csr">
-          <a>CSR</a>
-        </Link>
-      </li>
-      <li>
-        <Link href="/ssr">
-          <a>SSR</a>
-        </Link>
-      </li>
-      <li>
-        <Link href="/ssg">
-          <a>SSG</a>
-        </Link>
-      </li>
-      <li>
-        <Link href="/isr">
-          <a>ISR</a>
-        </Link>
-      </li>
-    </ul>
+    <main className={styles.main}>
+      <VtmnLink href="/csr">
+        <div className={styles.link}>CSR</div>
+      </VtmnLink>
+      <VtmnLink href="/ssr">
+        <div className={styles.link}>SSR</div>
+      </VtmnLink>
+      <VtmnLink href="/ssg">
+        <div className={styles.link}>SSG</div>
+      </VtmnLink>
+      <VtmnLink href="/isr">
+        <div className={styles.link}>ISR</div>
+      </VtmnLink>
+    </main>
   );
 }
 

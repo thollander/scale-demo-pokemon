@@ -1,28 +1,55 @@
 import { useState, useEffect } from "react";
+import PokemonList from "../components/PokemonList";
+import Date from "../components/Date";
+import PacmanLoader from "react-spinners/PacmanLoader";
+
+const override = {
+  display: "block",
+  margin: "30rem auto",
+};
 
 export default function Csr() {
   const [data, setData] = useState(null);
-  const [isLoading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
+  let [color] = useState("#0082C3");
 
   useEffect(() => {
     setLoading(true);
-    fetch("https://pokebuildapi.fr/api/v1/pokemon/limit/151")
-      .then((res) => res.json())
-      .then((data) => {
-        setData(data);
+
+    Promise.all([
+      fetch(`https://pokebuildapi.fr/api/v1/pokemon/limit/150`).then((res) =>
+        res.json()
+      ),
+      fetch(`https://worldtimeapi.org/api/timezone/Europe/Paris`).then((res) =>
+        res.json()
+      ),
+    ]).then((data) => {
+      setData(data);
+      // add some delay intentionnally for PacmanLoader
+      setTimeout(function () {
         setLoading(false);
-      });
+      }, 5000);
+    });
   }, []);
 
-  if (isLoading) return <p>Loading...</p>;
-  if (!data) return <p>No data</p>;
+  if (loading)
+    return (
+      <PacmanLoader
+        color={color}
+        loading={loading}
+        cssOverride={override}
+        size={150}
+      />
+    );
+  if (!data) return <div></div>;
+
+  const [pokemons, date] = data;
 
   return (
-    <div>
+    <main>
       <h1>Pokémons</h1>
-      {data.map(function (p, i) {
-        return <img src={p.sprite} alt={p.name} key={i} />;
-      })}
-    </div>
+      <Date date={date.datetime} />
+      <PokemonList pokemons={pokemons} />
+    </main>
   );
 }
