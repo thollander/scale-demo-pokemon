@@ -29,7 +29,7 @@ export default function Csr() {
       // add some delay intentionnally for PacmanLoader
       setTimeout(function () {
         setLoading(false);
-      }, 5000);
+      }, 1000);
     });
   }, []);
 
