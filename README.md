@@ -46,3 +46,9 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## ISR
 
+| Theme | Status |
+|---|---|
+| Scale | ![#0f0](https://via.placeholder.com/15/0f0/0f0.png)  Easy to scale |
+| Performance | ![#0f0](https://via.placeholder.com/15/0f0/0f0.png) Renders directly |
+| SEO | ![#0f0](https://via.placeholder.com/15/0f0/0f0.png) SEO compliant |
+| Data integrity | ![#ff7f00](https://via.placeholder.com/15/ff7f00/ff7f00.png) Data retrieved at build time and refreshed periodically |
