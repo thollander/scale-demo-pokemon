@@ -28,6 +28,13 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## SSR
 
+| Theme | Status |
+|---|---|
+| Scale | ![#ff7f00](https://via.placeholder.com/15/ff7f00/ff7f00.png)  Harder to scale |
+| Performance | ![#ff7f00](https://via.placeholder.com/15/ff7f00/ff7f00.png) Renders directly but waits for server |
+| SEO | ![#0f0](https://via.placeholder.com/15/0f0/0f0.png) SEO compliant |
+| Data integrity | ![#0f0](https://via.placeholder.com/15/0f0/0f0.png) Fresh data |
+
 ## SSG
 
 ## ISR
