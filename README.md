@@ -37,5 +37,12 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## SSG
 
+| Theme | Status |
+|---|---|
+| Scale | ![#0f0](https://via.placeholder.com/15/0f0/0f0.png)  Easy to scale |
+| Performance | ![#0f0](https://via.placeholder.com/15/0f0/0f0.png) Renders directly |
+| SEO | ![#0f0](https://via.placeholder.com/15/0f0/0f0.png) SEO compliant |
+| Data integrity | ![#f00](https://via.placeholder.com/15/f00/f00.png) Data retrieved once at build time |
+
 ## ISR
 
