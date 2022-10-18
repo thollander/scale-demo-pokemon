@@ -19,6 +19,13 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## CSR
 
+| Theme | Status |
+|---|---|
+| Scale | ![#0f0](https://via.placeholder.com/15/0f0/0f0.png)  Easy to scale |
+| Performance | ![#ff7f00](https://via.placeholder.com/15/ff7f00/ff7f00.png) "Blank page" then render |
+| SEO | ![#f00](https://via.placeholder.com/15/f00/f00.png) Not SEO friendly |
+| Data integrity | ![#0f0](https://via.placeholder.com/15/0f0/0f0.png) Fresh data |
+
 ## SSR
 
 ## SSG
