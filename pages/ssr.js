@@ -3,7 +3,7 @@ import Date from "../components/Date";
 
 export async function getServerSideProps() {
   const [pokemons, date] = await Promise.all([
-    (await fetch(`https://pokebuildapi.fr/api/v1/pokemon/limit/150`)).json(),
+    (await fetch(`https://pokebuildapi.fr/api/v1/pokemon/limit/151`)).json(),
     (await fetch(`https://worldtimeapi.org/api/timezone/Europe/Paris`)).json(),
   ]);
 

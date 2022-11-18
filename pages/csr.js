@@ -17,7 +17,7 @@ export default function Csr() {
     setLoading(true);
 
     Promise.all([
-      fetch(`https://pokebuildapi.fr/api/v1/pokemon/limit/150`).then((res) =>
+      fetch(`https://pokebuildapi.fr/api/v1/pokemon/limit/151`).then((res) =>
         res.json()
       ),
       fetch(`https://worldtimeapi.org/api/timezone/Europe/Paris`).then((res) =>
